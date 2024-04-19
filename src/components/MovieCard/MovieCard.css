@@ -1,0 +1,134 @@
+.movie-card {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 35% 1fr;
+  grid-template-areas:
+    'image details'
+    'image description'
+    'image rating';
+  grid-gap: 5px 10px;
+  /* margin: 0 auto; */
+  border: 3px solid rgb(191, 10, 236);
+  transition:
+    width 0.3s ease,
+    margin 0.3s ease;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.movie-details-header {
+  display: flex;
+  justify-content: space-between;
+}
+.movie-image {
+  height: 100%;
+  width: 100%;
+  /* width: 161.25px;
+  height: 272px; */
+  object-fit: cover;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.movie-image-container {
+  grid-area: image; /* item1 */
+  box-sizing: border-box;
+}
+.movie-details {
+  grid-area: details; /* item2 */
+  /* grid-template-rows: 40% 1fr; */
+}
+
+/* .movie-title {
+  font-size: 16px;
+  line-height: 28px;
+} */
+
+.movie-release-date {
+  font-size: 12px;
+  /* line-height: 22px; */
+  color: #827e7e;
+}
+
+.movie-genre {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genre-label {
+  border: 1px solid #d9d9d9;
+  border-radius: 3px; /* Делаем круглые края */
+  padding: 2px 4px 3px 5px; /* Отступы сверху, снизу, слева, справа */
+  /* margin-top: 7px; */
+  /* margin-right: 10px; Добавляем отступ между элементами */
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 14.52px;
+  background-color: #fafafa; /* Цвет фона внутри рамки */
+}
+
+.movie-description {
+  grid-area: description; /* item3 */
+  /* overflow: auto; */
+}
+
+.description-text {
+  font-size: 12px;
+  /* line-height: 22px; */
+  word-wrap: break-word; /* разрываем длинные слова */
+}
+
+.movie-rating-score {
+  grid-area: item4; /* item4 */
+}
+.movie-rating {
+  grid-area: rating; /* item5 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-details,
+.movie-rating-score {
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+@media (max-width: 965px) {
+  .movie-card {
+    display: grid;
+    /* width: auto; */
+    min-width: 340px;
+    height: 245px;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+      'image details'
+      'description description'
+      'rating rating';
+    /* grid-gap: 10px; */
+    margin: 0 auto;
+    border: 3px solid rgb(191, 10, 236);
+    transition: all 0.3s ease;
+    padding: 5px;
+  }
+  .movie-image {
+    width: 100%;
+    height: 100%;
+  }
+  .movie-details * {
+    max-height: 100px;
+    padding: 0;
+  }
+
+  .movie-rating-score {
+    padding: 0;
+  }
+  .movie-rating {
+    display: grid;
+    justify-content: end;
+  }
+}

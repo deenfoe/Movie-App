@@ -1,0 +1,4 @@
+/* <div style={{ minHeight: '100px', border: '1px solid red', alignItems: 'flex-start' }}>Header</div> */
+.header {
+  padding: 0;
+}

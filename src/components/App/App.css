@@ -1,0 +1,16 @@
+.layoutStyle {
+  max-width: 1010px;
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  /* background-color: rgb(236, 236, 236); */
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+@media (min-width: 960px) {
+  .LayoutStyle {
+    padding: 0 30px;
+  }
+}
