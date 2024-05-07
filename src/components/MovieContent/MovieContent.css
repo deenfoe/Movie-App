@@ -1,8 +1,6 @@
 .content {
   display: block;
-  border: 1px solid red;
   flex: 1;
-  /* margin: 0 auto; */
 }
 
 @media (max-width: 430px) {

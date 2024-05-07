@@ -1,0 +1,15 @@
+/* <div style={{ minHeight: '100px', border: '1px solid red', alignItems: 'flex-start' }}>Header</div> */
+.header {
+  background-color: #fff;
+  padding: 0;
+  height: auto;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 965px) {
+  .header {
+    margin-bottom: 10px;
+  }
+}

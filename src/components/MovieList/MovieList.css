@@ -6,6 +6,7 @@
   /* flex-wrap: wrap;
   justify-content: flex-start; */
   gap: 30px;
+  margin-bottom: 35px;
 }
 .spin {
   display: flex;
@@ -21,5 +22,6 @@
     grid-row-gap: 20px;
     margin-bottom: 20px;
     list-style-type: none;
+    margin-bottom: 20px;
   }
 }

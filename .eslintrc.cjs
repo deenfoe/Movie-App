@@ -26,12 +26,11 @@ module.exports = {
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     'jsx-a11y/label-has-associated-control': 0,
     'jsx-a11y/click-events-have-key-events': 0,
-    'react/jsx-no-target-blank': 'off',
-    'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/prefer-stateless-function': [1, { ignorePureComponents: false }],
     'react/prop-types': 0,
     'react/button-has-type': 0,
+    'class-methods-use-this': 0,
     'prettier/prettier': 'error',
     'linebreak-style': [0, 'unix'],
     'import/order': [

@@ -8,8 +8,6 @@
     'image description'
     'image rating';
   grid-gap: 5px 10px;
-  /* margin: 0 auto; */
-  border: 3px solid rgb(191, 10, 236);
   transition:
     width 0.3s ease,
     margin 0.3s ease;
@@ -21,6 +19,17 @@
   display: flex;
   justify-content: space-between;
 }
+
+.movie-details-rating {
+  border-radius: 50%;
+  padding: 15px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .movie-image {
   height: 100%;
   width: 100%;
@@ -62,7 +71,7 @@
   border: 1px solid #d9d9d9;
   border-radius: 3px; /* Делаем круглые края */
   padding: 2px 4px 3px 5px; /* Отступы сверху, снизу, слева, справа */
-  /* margin-top: 7px; */
+  margin-top: 7px;
   /* margin-right: 10px; Добавляем отступ между элементами */
   font-size: 12px;
   color: rgba(0, 0, 0, 0.65);
@@ -109,9 +118,7 @@
       'image details'
       'description description'
       'rating rating';
-    /* grid-gap: 10px; */
     margin: 0 auto;
-    border: 3px solid rgb(191, 10, 236);
     transition: all 0.3s ease;
     padding: 5px;
   }
@@ -121,7 +128,7 @@
   }
   .movie-details * {
     max-height: 100px;
-    padding: 0;
+    /* padding: 0; */
   }
 
   .movie-rating-score {
@@ -130,5 +137,11 @@
   .movie-rating {
     display: grid;
     justify-content: end;
+  }
+  .description-text {
+    margin-top: 10px;
+  }
+  .genre-label {
+    padding: 2px 4px 3px 5px;
   }
 }
