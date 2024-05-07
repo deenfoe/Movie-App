@@ -33,8 +33,6 @@
 .movie-image {
   height: 100%;
   width: 100%;
-  /* width: 161.25px;
-  height: 272px; */
   object-fit: cover;
 }
 
@@ -43,22 +41,16 @@
 }
 
 .movie-image-container {
-  grid-area: image; /* item1 */
+  grid-area: image; 
   box-sizing: border-box;
 }
 .movie-details {
-  grid-area: details; /* item2 */
-  /* grid-template-rows: 40% 1fr; */
-}
+  grid-area: details;
 
-/* .movie-title {
-  font-size: 16px;
-  line-height: 28px;
-} */
+}
 
 .movie-release-date {
   font-size: 12px;
-  /* line-height: 22px; */
   color: #827e7e;
 }
 
@@ -72,7 +64,6 @@
   border-radius: 3px; /* Делаем круглые края */
   padding: 2px 4px 3px 5px; /* Отступы сверху, снизу, слева, справа */
   margin-top: 7px;
-  /* margin-right: 10px; Добавляем отступ между элементами */
   font-size: 12px;
   color: rgba(0, 0, 0, 0.65);
   line-height: 14.52px;
@@ -80,13 +71,10 @@
 }
 
 .movie-description {
-  grid-area: description; /* item3 */
-  /* overflow: auto; */
+  grid-area: description;
 }
 
 .description-text {
-  font-size: 12px;
-  /* line-height: 22px; */
   word-wrap: break-word; /* разрываем длинные слова */
 }
 
@@ -109,7 +97,6 @@
 @media (max-width: 965px) {
   .movie-card {
     display: grid;
-    /* width: auto; */
     min-width: 340px;
     height: 245px;
     grid-template-columns: 60px 1fr;
@@ -128,7 +115,6 @@
   }
   .movie-details * {
     max-height: 100px;
-    /* padding: 0; */
   }
 
   .movie-rating-score {
