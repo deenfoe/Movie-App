@@ -106,7 +106,7 @@ export default class MovieList extends Component {
       const { genres } = await this.movieService.getGenres()
       this.setState({ genres })
     } catch (error) {
-      this.setState({ error: 'Произошла ошибка при загрузке жанров' })
+      this.setState(error)
     }
   }
 
@@ -123,7 +123,9 @@ export default class MovieList extends Component {
       <>
         {loading && <Spin size="large" className="spin" />}
 
-        {error && <Alert message="Error" description={error} type="error" showIcon />}
+        {error && (
+          <Alert message="Ошибка" description="Что-то пошло не так, попробуйте ещё раз." type="error" showIcon />
+        )}
 
         {notFound && (
           <Alert

@@ -41,22 +41,16 @@
 }
 
 .movie-image-container {
-  grid-area: image; 
+  grid-area: image;
   box-sizing: border-box;
 }
 .movie-details {
   grid-area: details;
-
 }
 
 .movie-release-date {
   font-size: 12px;
   color: #827e7e;
-}
-
-.movie-genre {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .genre-label {
