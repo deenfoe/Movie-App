@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import { Alert, Spin } from 'antd'
 
 import MovieCard from '../MovieCard/MovieCard'
-import MovieService from '../../services/MovieService'
+import movieService from '../../services/MovieService'
 import './MovieList.css'
 
 export default class MovieList extends Component {
-  movieService = new MovieService()
-
   constructor(props) {
     super(props)
     this.state = {
@@ -61,7 +59,7 @@ export default class MovieList extends Component {
     const { guestSessionId, onTotalResults } = this.props
     if (guestSessionId) {
       try {
-        const { movies, totalResults } = await this.movieService.getRatedMovies(guestSessionId)
+        const { movies, totalResults } = await movieService.getRatedMovies(guestSessionId)
         this.setState({ movies })
         if (movies.length === 0) {
           this.setState({ notFound: true })
@@ -80,7 +78,7 @@ export default class MovieList extends Component {
   fetchMovies = (query, page) => {
     this.setState({ loading: true })
 
-    this.movieService
+    movieService
       .getMovies(query, page)
       .then(({ movies, totalResults }) => {
         if (movies.length === 0) {
@@ -103,7 +101,7 @@ export default class MovieList extends Component {
 
   fetchGenres = async () => {
     try {
-      const { genres } = await this.movieService.getGenres()
+      const { genres } = await movieService.getGenres()
       this.setState({ genres })
     } catch (error) {
       this.setState(error)

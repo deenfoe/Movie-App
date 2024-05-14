@@ -1,6 +1,6 @@
 import { format } from 'date-fns'
 
-export default class MovieService {
+class MovieService {
   imgBase = 'https://image.tmdb.org/t/p/w500'
 
   noPosterImg = '../images/noposter.png'
@@ -169,3 +169,8 @@ export default class MovieService {
     this.setState({ headerCurrentTab: tabKey })
   }
 }
+
+// Создание экземпляра класса MovieService
+const moviService = new MovieService()
+// Экспорт экземпляра класса для использования в других частях приложения
+export default moviService

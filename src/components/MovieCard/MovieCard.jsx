@@ -2,13 +2,11 @@ import React, { Component } from 'react'
 import { Typography, Rate, Flex, Tag, Alert } from 'antd'
 
 import './MovieCard.css'
-import MovieService from '../../services/MovieService'
+import movieService from '../../services/MovieService'
 
 const { Title, Paragraph } = Typography
 
 export default class MovieCard extends Component {
-  movieService = new MovieService()
-
   constructor(props) {
     super(props)
     this.state = {
@@ -32,7 +30,7 @@ export default class MovieCard extends Component {
       return
     }
     try {
-      await this.movieService.rateMovie(guestSessionId, movie.id, value)
+      await movieService.rateMovie(guestSessionId, movie.id, value)
       updateMovieRating(movie.id, value)
     } catch (error) {
       this.setState({ error: 'Ошибка при отправке рейтинга. Пожалуйста, попробуйте позже.' })

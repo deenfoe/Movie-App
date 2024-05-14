@@ -4,7 +4,7 @@ import { Layout } from 'antd'
 import MovieHeader from '../MovieHeader'
 import MovieContent from '../MovieContent'
 import MovieFooter from '../MovieFooter'
-import MovieService from '../../services/MovieService'
+import movieService from '../../services/MovieService'
 
 import './App.css'
 
@@ -26,7 +26,6 @@ export default class App extends Component {
   }
 
   createGuestSession = async () => {
-    const movieService = new MovieService()
     let { guestSessionId } = this.state
     if (!guestSessionId) {
       guestSessionId = await movieService.createGuestSession()
